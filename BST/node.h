@@ -25,10 +25,9 @@ public:
 
 	~Node() {
 
-		if (left)  left->~Node();
-		if (right) right->~Node();
+		if (left)  delete left;
+		if (right) delete right;
 
-		delete this;
 	}
 
 };
